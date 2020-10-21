@@ -2,16 +2,19 @@
 
 
 const services = [
-  { name: 'HOARDING CLEAN-UP', text: 'Hoarding is a complex problem often occurring over many years, the person usually has levels of difficulty that may have no identifiable cause' },
+  { name: "24/7 Emergency Service", text: 'We are dedicated to help our customers at all times of the day. Just give us a call, and our team will take care of the emergency' },
+  { name: 'HOARDING CLEAN-UP', text: 'Professional clearing, cleaning and decontamination quickly returns your property to a habitable and saleable condition.' },
   { name: 'ANIMAL HOARDING CLEAN-UP', text: 'A DANGEROUS SITUATION, Animal waste and dander can be unsafe when not properly contained and regularly cleaned.' },
-  { name: "GROSS FILTH CLEANING", text: 'Bacteria, Mold, Feces are all harmful and need to be cleaned up correctly and thoroughly.' },
-  { name: "HAZARDOUS WASTE REMOVAL", text: 'Feces and Urine Clean up' },
-  { name: "DEEP CLEAN", text: 'Sanitize and Clean' },
-  { name: "Fire Restoration", text: 'Fire can cause damage in numerous ways, and need to be dealt with properly' },
-  { name: "Controlled Demolition", text: 'Safe and Controlled demolition, saving property owners and contractors hundreds of millions' }
+  { name: "GROSS FILTH CLEANING", text: 'Bacteria, Mold, Feces, Urine are all harmful and need to be cleaned up correctly and thoroughly.' },
+  { name: "HAZARDOUS WASTE REMOVAL", text: 'Cleaning and effective dumping of hazardous waste.' },
+  { name: "DEEP CLEAN", text: 'Sanitizing and Cleaning services provided to ensure safe enviroments.' },
+  { name: "Fire Restoration", text: 'Fire can cause damage in numerous ways, and need to be dealt with properly.' },
+  { name: "Controlled Demolition", text: 'Safe and Controlled demolition, saving property owners and contractors hundreds of millions.' },
+  { name: "Excellent Customer Service", text: 'Let us show you how important you are to us, by surpassing your expectations' }
+
 ]
 
-const sServices=["24/7 Emergency Service","Responsive Team", "Excellent Customer Service"]
+const sServices=''
 
 const certification = [
   {
