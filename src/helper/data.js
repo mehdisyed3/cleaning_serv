@@ -1,8 +1,6 @@
 
-
-
 const services = [
-  { name: "24/7 Emergency Service", text: 'We are dedicated to help our customers at all times of the day. Just give us a call, and our team will take care of the emergency' },
+  { name: "24/7 Emergency Service", text: 'We are dedicated to help our customers at all times of the day. Just give us a call, and our team will take care of the emergency.' },
   { name: 'HOARDING CLEAN-UP', text: 'Professional clearing, cleaning and decontamination quickly returns your property to a habitable and saleable condition.' },
   { name: 'ANIMAL HOARDING CLEAN-UP', text: 'A DANGEROUS SITUATION, Animal waste and dander can be unsafe when not properly contained and regularly cleaned.' },
   { name: "GROSS FILTH CLEANING", text: 'Bacteria, Mold, Feces, Urine are all harmful and need to be cleaned up correctly and thoroughly.' },
@@ -13,8 +11,6 @@ const services = [
   { name: "Excellent Customer Service", text: 'Let us show you how important you are to us, by surpassing your expectations' }
 
 ]
-
-const sServices=''
 
 const certification = [
   {
@@ -50,9 +46,11 @@ const certification = [
     desc: 'Working At Heights'
   }
 
-];
+]
 
 
 
-export { certification, services,sServices }
+
+
+export { certification, services }
 

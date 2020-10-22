@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div ref={topRef} className="container mx-auto">
+    <div ref={topRef} className="container mx-auto ">
 
       <div className='fixed-top'>
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
@@ -62,7 +62,7 @@ function App() {
 
       <hr ref={certRef} />
 
-      <div >
+      <div>
 
         <h3 className='mt-5 mb-5 text-center '> Qualifications & Certificates</h3>
         <br />
@@ -76,7 +76,7 @@ function App() {
 
       <div>
         <h3 className='mt-5 mb-5 text-center'>Contact Us</h3>
-        <div className=''>
+        <div>
           <ContactForm />
         </div>
       </div>

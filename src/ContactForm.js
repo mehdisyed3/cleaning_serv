@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 
 
+
 function ContactForm() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -43,19 +44,50 @@ function ContactForm() {
         console.log(err)
         setErrSubmit(true)
       })
+      
+          setName("")
+          setEmail("")
+          setMessage("")
+          setPhone("")
+        
+        }
+        
+        
+  var cForm =<Form onSubmit={handleSubmit} >
 
-    
+  <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
+    <div className='row'>
+      <div className="col-md col-lg text-left">
+        <Form.Label htmlFor="name">Name</Form.Label>
+        <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
+      </div>
 
-    setName("")
-    setEmail("")
-    setMessage("")
-    setPhone("")
-    
+      <div className="col-md col-lg m-1 text-left">
+        <Form.Label htmlFor="email">Email address</Form.Label>
+        <Form.Control name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
+      </div>
 
-  }
+      <div className="col-md col-lg m-1 text-left">
+        <Form.Label htmlFor='phone'>Phone Number </Form.Label>
+        <Form.Control type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
+      </div>
+    </div>
 
 
+    <div className="text-left m-1">
+      <Form.Label htmlFor="message">Message</Form.Label>
+      <Form.Control rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
+    </div>
 
+
+    <div className="m-3 text-left">
+
+      <Button disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Submit</Button>
+
+    </div>
+  </Form>
+
+  
   return (
     // Contact for will be visible on component mount.
     // if form is submitted , Success Message will appear . Form will disappear
@@ -67,81 +99,17 @@ function ContactForm() {
         </p>
          :
         errSubmit ?
-        <>
-        <p className='text-danger text-center'>
-          Oops. Something went wrong. Please Try again later.
-        </p> 
-        
-        <Form onSubmit={handleSubmit} >
-
-        <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
-          <div className='row'>
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor="name">Name</Form.Label>
-              <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
-            </div>
-
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor="email">Email address</Form.Label>
-              <Form.Control name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
-            </div>
-
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor='phone'>Phone Number </Form.Label>
-              <Form.Control type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
-            </div>
-          </div>
-
-
-          <div className="text-left m-1">
-            <Form.Label htmlFor="message">Message</Form.Label>
-            <Form.Control rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
-          </div>
-
-
-          <div className="m-3 text-left">
-
-            <Button disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Submit</Button>
-
-          </div>
-        </Form>
-        </>
-
+      
+        <div>
+          <p className='text-danger text-center'>
+            Oops. Something went wrong. Please Try again later.
+          </p> 
+          
+          {cForm}
+        </div>        
         :
         
-        <Form onSubmit={handleSubmit} >
-
-          <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
-          <div className='row'>
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor="name">Name</Form.Label>
-              <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
-            </div>
-
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor="email">Email address</Form.Label>
-              <Form.Control size="lg" name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
-            </div>
-
-            <div className="col-md col-lg m-1 text-left">
-              <Form.Label htmlFor='phone'>Phone Number </Form.Label>
-              <Form.Control size="lg" type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
-            </div>
-          </div>
-
-
-          <div className="text-left m-1">
-            <Form.Label htmlFor="message">Message</Form.Label>
-            <Form.Control size="lg" rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
-          </div>
-
-
-          <div className="mt-3">
-
-            <Button size="lg" disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Send</Button>
-
-          </div>
-        </Form>
+        cForm
       }
     </>
   )
