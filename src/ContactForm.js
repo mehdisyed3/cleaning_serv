@@ -138,7 +138,7 @@ function ContactForm() {
 
           <div className="mt-3">
 
-            <Button size="lg" disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Submit</Button>
+            <Button size="lg" disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Send</Button>
 
           </div>
         </Form>
