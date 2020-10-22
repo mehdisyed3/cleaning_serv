@@ -1,17 +1,14 @@
 import React from 'react'
+import { Jumbotron } from 'react-bootstrap'
 
 function Tagline() {
   return (
-    
-    
-    <h6 className='lead'>
-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas sapien eget efficitur mattis.
-      Donec dictum eu nisi tempus commodo. Morbi viverra dui sed arcu cursus, venenatis egestas risus scelerisque.
-      Pellentesque at lacinia dui. Curabitur quis mattis velit, in suscipit neque. Etiam porttitor porta quam, in
-      rutrum nibh tincidunt vel. Pellentesque ipsum purus, sollicitudin vitae mattis a, semper in leo. Morbi euismod
-      gravida lacus. Integer feugiat venenatis turpis, vehicula imperdiet lorem. Suspendisse potenti.
-    </h6>
+    <Jumbotron className="text-center">
+      <h1>Need cleaning?</h1>
+      <p className="lead px-5">
+        We care and understand the difficulty of dealing and living in a hoarded and hazardous places during difficult times. Get in touch so we can take care of it for you.
+      </p>
+    </Jumbotron>
   )
 }
 

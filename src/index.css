@@ -1,8 +1,12 @@
 
 .App{
   background-color: rgb(199, 184, 184);
-}
 
+}
+body {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
 .hoverable:hover{
   transform: scale(1.05)
 }

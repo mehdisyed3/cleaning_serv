@@ -74,15 +74,11 @@ function ContactForm() {
         
         <Form onSubmit={handleSubmit} >
 
-          <Form.Text className="text-muted text-left m-1 mb-3">
-            * Please provide your details and someone from our office will get back to you.<br />
-            * In order to submit your inquiry, Please provide either your Email Address or your Phone Number.
-            Your information will not be shared with anyone.
-        </Form.Text>
+        <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
           <div className='row'>
             <div className="col-md col-lg m-1 text-left">
               <Form.Label htmlFor="name">Name</Form.Label>
-              <Form.Control type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
+              <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
             </div>
 
             <div className="col-md col-lg m-1 text-left">
@@ -115,38 +111,34 @@ function ContactForm() {
         
         <Form onSubmit={handleSubmit} >
 
-          <Form.Text className="text-muted text-left m-1 mb-3">
-            * Please provide your details and someone from our office will get back to you.<br />
-            * In order to submit your inquiry, Please provide either your Email Address or your Phone Number.
-            Your information will not be shared with anyone.
-        </Form.Text>
+          <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
           <div className='row'>
             <div className="col-md col-lg m-1 text-left">
               <Form.Label htmlFor="name">Name</Form.Label>
-              <Form.Control type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
+              <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
             </div>
 
             <div className="col-md col-lg m-1 text-left">
               <Form.Label htmlFor="email">Email address</Form.Label>
-              <Form.Control name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
+              <Form.Control size="lg" name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
             </div>
 
             <div className="col-md col-lg m-1 text-left">
               <Form.Label htmlFor='phone'>Phone Number </Form.Label>
-              <Form.Control type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
+              <Form.Control size="lg" type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
             </div>
           </div>
 
 
           <div className="text-left m-1">
             <Form.Label htmlFor="message">Message</Form.Label>
-            <Form.Control rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
+            <Form.Control size="lg" rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
           </div>
 
 
-          <div className="m-3 text-left">
+          <div className="mt-3">
 
-            <Button disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Submit</Button>
+            <Button size="lg" disabled={email === "" && phone === "" ? true : false} type="submit" className="btn btn-primary">Submit</Button>
 
           </div>
         </Form>

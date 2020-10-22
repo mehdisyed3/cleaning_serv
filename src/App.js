@@ -6,7 +6,6 @@ import Qualifications from './Qualifications';
 import ContactForm from './ContactForm'
 import Tagline from './Tagline'
 
-
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Col } from 'react-bootstrap'
 
@@ -32,7 +31,7 @@ function App() {
 
   const topScroll = () => scrollToRef(topRef)
 
- 
+
 
 
   return (
@@ -41,23 +40,23 @@ function App() {
       <div className='fixed-top'>
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
       </div>
-      <br/>
-     
+      <br />
+
 
       <div className='mt-5 mb-5 '>
         <Tagline />
       </div>
 
-      <hr ref={serviceRef}  />
+      <hr ref={serviceRef} />
 
       <div className='mt-5 mb-5 text-center'>
 
         <h3>Services We Offer</h3>
-        <br/>
+        <br />
 
-          <div className='row'>
-            {service}
-          </div>
+        <div className='row'>
+          {service}
+        </div>
 
       </div>
 
@@ -75,10 +74,11 @@ function App() {
 
       <hr ref={contactRef} />
 
-      <div className='m-5 text-center'>
-        <h3 >Contact Us</h3>
-        <br />
-        <ContactForm />
+      <div>
+        <h3 className='mt-5 mb-5 text-center'>Contact Us</h3>
+        <div className=''>
+          <ContactForm />
+        </div>
       </div>
 
     </div>
