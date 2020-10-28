@@ -54,7 +54,7 @@ function App() {
         <h3>Services We Offer</h3>
         <br />
 
-        <div className='row'>
+        <div className='row d-flex justify-content-center'>
           {service}
         </div>
 
@@ -66,7 +66,7 @@ function App() {
 
         <h3 className='mt-5 mb-5 text-center '> Qualifications & Certificates</h3>
         <br />
-        <div className='row'>
+        <div className='row d-flex justify-content-center'>
           {certs}
         </div>
 
