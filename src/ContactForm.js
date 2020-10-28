@@ -55,7 +55,7 @@ function ContactForm() {
         
   var cForm =<Form onSubmit={handleSubmit} >
 
-  <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
+  
     <div className='row'>
       <div className="col-md col-lg text-left">
         <Form.Label htmlFor="name">Name</Form.Label>
@@ -93,6 +93,7 @@ function ContactForm() {
     // if form is submitted , Success Message will appear . Form will disappear
     // if form submission fails, failure message along with contact form will appear
     <>
+      <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
       {didSubmit ?
         <p className='text-success text-center'>
           Thank You. Your inquiry has been submitted.

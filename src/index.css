@@ -1,9 +1,12 @@
 
-.App{
-  background-color: rgb(199, 184, 184);
-
-}
 body {
   padding-top: 40px;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 440px) {
+  .smScreen{
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }

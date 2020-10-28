@@ -16,7 +16,7 @@ function App() {
   // const services2a = sServices.map((item, i) => <Col className="col mb-5" key={i}  ><SecondaryService item={item} /></Col>)
   const certs = certification.map((item, i) => <Col className="col-md-4 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 80)
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 90)
 
   const contactRef = useRef(null)
   const serviceRef = useRef(null)
@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div ref={topRef} className="container mx-auto ">
+    <div ref={topRef} className="container mx-auto smScreen ">
 
       <div className='fixed-top'>
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
