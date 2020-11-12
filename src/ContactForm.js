@@ -89,11 +89,15 @@ function ContactForm() {
 
   
   return (
-    // Contact for will be visible on component mount.
+    // Contact form will be visible on component mount.
     // if form is submitted , Success Message will appear . Form will disappear
     // if form submission fails, failure message along with contact form will appear
     <>
-      <p> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you.</p>
+      
+      <p className='text-center'>You can call us at 416.206.3282</p>
+      <p hidden={didSubmit} className="text-center">OR</p>
+      <p hidden={didSubmit}className="text-center"> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you. Your information will not be shared</p>
+      
       {didSubmit ?
         <p className='text-success text-center'>
           Thank You. Your inquiry has been submitted.

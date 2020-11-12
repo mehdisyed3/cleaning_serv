@@ -13,10 +13,9 @@ import { Col } from 'react-bootstrap'
 function App() {
 
   const service = services.map((item, i) => <Col className="col-md-4 mb-4 col-sm-6" key={i}  ><Service item={item} /></Col>)
-  // const services2a = sServices.map((item, i) => <Col className="col mb-5" key={i}  ><SecondaryService item={item} /></Col>)
   const certs = certification.map((item, i) => <Col className="col-md-4 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 90)
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 100)
 
   const contactRef = useRef(null)
   const serviceRef = useRef(null)
@@ -35,26 +34,24 @@ function App() {
 
 
   return (
-    <div ref={topRef} className="container mx-auto smScreen ">
+    <div ref={topRef} className=" container mx-auto smScreen ">
 
-      <div className='fixed-top'>
+      <div className='fixed-top '>
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
       </div>
-      <br />
+      
 
 
       <div className='mt-5 mb-5 '>
         <Tagline />
       </div>
-
-      <hr ref={serviceRef} />
-
-      <div className='mt-5 mb-5 text-center'>
+      <br/>
+      <div ref={serviceRef} className='mt-5 mb-5 text-center'>
 
         <h3>Services We Offer</h3>
         <br />
 
-        <div className='row d-flex justify-content-center'>
+        <div className=' row d-flex justify-content-center'>
           {service}
         </div>
 

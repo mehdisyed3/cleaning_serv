@@ -4,6 +4,15 @@ body {
   padding-bottom: 20px;
 }
 
+.bColor{
+  background-color: rgb(140, 60, 51);
+  color: rgb(192,192,192);
+}
+
+.bColor:hover{
+  color: rgb(240, 233, 233)
+}
+
 @media screen and (max-width: 440px) {
   .smScreen{
     padding-top: 48px;

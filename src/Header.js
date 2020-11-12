@@ -3,7 +3,7 @@ import Navigation from './Navigation'
 
 function Header({ topScroll, contactScroll, serviceScroll, certScroll }) {
   return (
-    <header>
+    <header className=''>
       <Navigation topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
     </header>
 
