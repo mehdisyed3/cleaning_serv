@@ -9,13 +9,15 @@ body {
   color: rgb(192,192,192);
 }
 
-.bColor:hover{
-  color: rgb(240, 233, 233)
-}
 
 @media screen and (max-width: 440px) {
   .smScreen{
     padding-top: 48px;
     padding-bottom: 48px;
   }
+}
+
+
+.navbar .subheading {
+  
 }

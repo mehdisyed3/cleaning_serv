@@ -22,13 +22,26 @@ function App() {
   const certRef = useRef(null)
   const topRef = useRef(null)
 
-  const contactScroll = () => scrollToRef(contactRef)
+  const contactScroll = (e) => {
+    e.preventDefault()
+    scrollToRef(contactRef)
+  }
 
-  const serviceScroll = () => scrollToRef(serviceRef)
 
-  const certScroll = () => scrollToRef(certRef)
+  const serviceScroll = (e) => {
+    e.preventDefault()
+    scrollToRef(serviceRef)
+  }
 
-  const topScroll = () => scrollToRef(topRef)
+  const certScroll = (e) => {
+    e.preventDefault()
+    scrollToRef(certRef)
+  }
+
+  const topScroll = (e) => {
+    e.preventDefault()
+    scrollToRef(topRef)
+  }
 
 
 
