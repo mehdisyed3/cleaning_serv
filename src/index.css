@@ -11,14 +11,6 @@ body {
 }
 
 
-@media screen and (max-width: 440px) {
-  .smScreen{
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
-}
-
-
 /* 
 Extra small devices (portrait phones, less than 544px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
@@ -31,6 +23,10 @@ h1 {
 
 .navbar .info {
   font-size: 1rem;
+}
+
+.qual-img-holder {
+  max-height: 100px;
 }
 /*
 ####################################################

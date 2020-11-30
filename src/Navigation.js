@@ -7,7 +7,7 @@ function Navigation({ topScroll, contactScroll, serviceScroll, certScroll }) {
     <Navbar className="bColor navbar navbar-light navbar-expand-xs nav d-flex flex-column">
       <div className="py-2 d-flex flex-row align-items-center">
         <img  src={logo} alt="AMPM Remediation Services" className="logo ml-2 ml-md-0" />
-        <div class>
+        <div>
           <h1 className='text-white' onClick={topScroll}>AMPM Remediation Services</h1>
           <div className="d-flex flex-column flex-md-row info mt-2">
             <span className=" d-block subheading">416-206-3282</span>
