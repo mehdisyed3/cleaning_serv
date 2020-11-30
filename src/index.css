@@ -17,8 +17,70 @@ body {
     padding-bottom: 48px;
   }
 }
+
+
+/* 
+Extra small devices (portrait phones, less than 544px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+h1 {
+  font-size:1.2rem;
+  margin: 0;
+  padding: 0;
+} /*1rem = 16px*/
+
+.navbar .info {
+  font-size: 1rem;
+}
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+  h1 {font-size:1.4rem;} /*1rem = 16px*/
+  .navbar .info {
+    font-size: 1.2rem;
+  }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  h1 {font-size:1.6rem;} /*1rem = 16px*/
+  .navbar .info {
+    font-size: 1.4rem;
+  }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  h1 {font-size:2rem;} /*1rem = 16px*/
+  .navbar .info {
+    font-size: 1.4rem;
+  }
+}
+ 
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+
 .navbar {
   padding: 0 !important;
+}
+
+.navbar .logo {
+  max-width: 100px;
+  margin-right: 20px;
 }
 
 .navbar a,

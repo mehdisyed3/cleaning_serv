@@ -75,7 +75,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Tagline goToContact={contactScroll} />
+      {/* <Tagline goToContact={contactScroll} /> */}
     </>
   );
 }
