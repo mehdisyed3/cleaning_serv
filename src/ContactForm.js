@@ -53,40 +53,36 @@ function ContactForm() {
   }
 
 
-  var cForm = <Form onSubmit={handleSubmit} >
-
-
+  var cForm = (<Form onSubmit={handleSubmit}>
     <div className='row'>
       <div className="col-md col-lg text-left">
-        <Form.Label htmlFor="name">Name</Form.Label>
-        <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
+        <div className="form-group">
+          <Form.Label htmlFor="name">Name</Form.Label>
+          <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
+        </div>
       </div>
-
       <div className="col-md col-lg text-left">
-        <Form.Label htmlFor="email">Email address</Form.Label>
-        <Form.Control size="lg" name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
+        <div className="form-group"> <Form.Label htmlFor="email">Email address</Form.Label>
+          <Form.Control size="lg" name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
+        </div>
       </div>
-
       <div className="col-md col-lg text-left">
-        <Form.Label htmlFor='phone'>Phone Number </Form.Label>
-        <Form.Control size="lg" type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
+        <div className="form-group">
+          <Form.Label htmlFor='phone'>Phone Number </Form.Label>
+          <Form.Control size="lg" type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
+        </div>
       </div>
     </div>
-
-
     <div className="text-left">
-      <Form.Label htmlFor="message">Message</Form.Label>
-      <Form.Control size="lg" rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
+      <div className="form-group">
+        <Form.Label htmlFor="message">Message</Form.Label>
+        <Form.Control size="lg" rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
+      </div>
     </div>
-
-
     <div className="mt-3 text-left">
-
       <Button disabled={email === "" && phone === "" ? true : false} size="lg" type="submit" className="btn btn-primary">Send</Button>
-
     </div>
-  </Form>
-
+  </Form>)
 
   return (
     <>
