@@ -62,19 +62,19 @@ function ContactForm() {
         <Form.Control size="lg" type="text" name="name" value={name} placeholder='Name' onChange={handleChange} />
       </div>
 
-      <div className="col-md col-lg m-1 text-left">
+      <div className="col-md col-lg text-left">
         <Form.Label htmlFor="email">Email address</Form.Label>
         <Form.Control size="lg" name='email' type="email" value={email} placeholder="someone@somwhere.com" onChange={handleChange} />
       </div>
 
-      <div className="col-md col-lg m-1 text-left">
+      <div className="col-md col-lg text-left">
         <Form.Label htmlFor='phone'>Phone Number </Form.Label>
         <Form.Control size="lg" type="tel" value={phone} name='phone' pattern="[0-9]{10}" placeholder="Your 10 digit phone number" onChange={handleChange} />
       </div>
     </div>
 
 
-    <div className="text-left m-1">
+    <div className="text-left">
       <Form.Label htmlFor="message">Message</Form.Label>
       <Form.Control size="lg" rows='4' as="textarea" value={message} name='message' onChange={handleChange} placeholder='Type in your message' />
     </div>
