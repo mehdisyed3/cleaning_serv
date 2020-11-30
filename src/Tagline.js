@@ -1,22 +1,27 @@
 import React, {useState} from 'react'
-import { Button, Modal, ModalBody,ModalTitle } from 'react-bootstrap'
+import { Button, Modal } from 'react-bootstrap'
 
-function Tagline() {
-
+function Tagline({ goToContact }) {
   const [appear, setAppear] = useState(true)
+
+  function contactCTA(e) {
+    setAppear(false)
+    goToContact(e)
+  }
+
+  const handleClose = () => setAppear(false);
 
   return (
     
-    <Modal show={appear}>
-      <Modal.Header className="text-center"><h1 className="mx-auto"> Need Cleaning?</h1></Modal.Header>
+    <Modal show={appear}  onHide={handleClose}>
+      <Modal.Header className="" closeButton><Modal.Title>Need Cleaning?</Modal.Title></Modal.Header>
       <Modal.Body className="text-center">
-        <p className="lead px-5 text-center">
-        We care and understand the difficulty of dealing and living in hoarded and hazardous places during difficult times. Get in touch so we can take care of it for you. 
-        </p>
-        <small className=''> *We are insured and bonded</small>
+        <p className="lead px-5 text-center">We care and understand the difficulty of dealing and living in hoarded and hazardous places during difficult times.</p>
+        <p>Get in touch so we can take care of it for you.</p>
+        <strong className=''>We are insured and bonded.</strong>
       </Modal.Body>
       <Modal.Footer >
-        <Button onClick={()=> setAppear(false)} > Close </Button>
+        <Button onClick={contactCTA}>Contact Us</Button>
       </Modal.Footer>
     </Modal>
   )

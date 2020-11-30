@@ -15,7 +15,7 @@ function App() {
   const service = services.map((item, i) => <Col className="col-md-4 mb-4 col-sm-6" key={i}  ><Service item={item} /></Col>)
   const certs = certification.map((item, i) => <Col className="col-md-4 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
 
-  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 100)
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 200)
 
   const contactRef = useRef(null)
   const serviceRef = useRef(null)
@@ -47,51 +47,36 @@ function App() {
 
 
   return (
-    <div ref={topRef} className=" container mx-auto smScreen ">
-
+    <>
       <div className='fixed-top '>
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
       </div>
-      
-
-
-      <div className='mt-5 mb-5 '>
-        <Tagline />
-      </div>
-      <br/>
-      <div ref={serviceRef} className='mt-5 mb-5 text-center'>
-
-        <h3>Services We Offer</h3>
-        <br />
-
-        <div className=' row d-flex justify-content-center'>
-          {service}
+      <div ref={topRef} className=" container mx-auto smScreen ">
+        <div className='mt-5 mb-5 text-center'>
+          <h3 ref={serviceRef}>Services We Offer</h3>
+          <br />
+          <div className=' row d-flex justify-content-center'>
+            {service}
+          </div>
         </div>
-
-      </div>
-
-      <hr ref={certRef} />
-
-      <div>
-
-        <h3 className='mt-5 mb-5 text-center '> Qualifications & Certificates</h3>
-        <br />
-        <div className='row d-flex justify-content-center'>
-          {certs}
-        </div>
-
-      </div>
-
-      <hr ref={contactRef} />
-
-      <div>
-        <h3 className='mt-5 mb-5 text-center'>Contact Us</h3>
+        <hr />
         <div>
-          <ContactForm />
+          <h3 className='mt-5 mb-5 text-center' ref={certRef}> Qualifications & Certificates</h3>
+          <br />
+          <div className='row d-flex justify-content-center'>
+            {certs}
+          </div>
+        </div>
+        <hr />
+        <div>
+          <h3 className='mt-5 mb-5 text-center' ref={contactRef}>Contact Us</h3>
+          <div>
+            <ContactForm />
+          </div>
         </div>
       </div>
-
-    </div>
+      <Tagline goToContact={contactScroll} />
+    </>
   );
 }
 

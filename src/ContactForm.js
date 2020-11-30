@@ -10,7 +10,7 @@ function ContactForm() {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [didSubmit, setDidSubmit] = useState(false)
-  const [errSubmit , setErrSubmit] = useState(false)
+  const [errSubmit, setErrSubmit] = useState(false)
 
 
   const handleChange = (e) => {
@@ -25,37 +25,37 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const info ={
+    const info = {
       name,
       email,
       phone,
       message
     }
 
-    axios.post('url',info)
+    axios.post('url', info)
       .then(res => {
 
         console.log(res)
         setDidSubmit(true)
 
       })
-      .catch(err =>{
+      .catch(err => {
 
         console.log(err)
         setErrSubmit(true)
       })
-      
-          setName("")
-          setEmail("")
-          setMessage("")
-          setPhone("")
-        
-        }
-        
-        
-  var cForm =<Form onSubmit={handleSubmit} >
 
-  
+    setName("")
+    setEmail("")
+    setMessage("")
+    setPhone("")
+
+  }
+
+
+  var cForm = <Form onSubmit={handleSubmit} >
+
+
     <div className='row'>
       <div className="col-md col-lg text-left">
         <Form.Label htmlFor="name">Name</Form.Label>
@@ -87,34 +87,27 @@ function ContactForm() {
     </div>
   </Form>
 
-  
+
   return (
-    // Contact form will be visible on component mount.
-    // if form is submitted , Success Message will appear . Form will disappear
-    // if form submission fails, failure message along with contact form will appear
     <>
-      
-      <p className='text-center'>You can call us at 416.206.3282</p>
-      <p hidden={didSubmit} className="text-center">OR</p>
-      <p hidden={didSubmit}className="text-center"> Get in touch with us to get a quote on your clean up. Please provide either a phone number or email address for us to get back to you. Your information will not be shared</p>
-      
+      <p className='lead'>You can call us at 416-206-3282 or use the form below to get in touch with us or receive a FREE Quote.</p>
+      <p className="mb-4"><strong>Please be advised that your information is never shared or sold.</strong></p>
       {didSubmit ?
         <p className='text-success text-center'>
           Thank You. Your inquiry has been submitted.
         </p>
-         :
-        errSubmit ?
-      
-        <div>
-          <p className='text-danger text-center'>
-            Oops. Something went wrong. Please Try again later.
-          </p> 
-          
-          {cForm}
-        </div>        
         :
-        
-        cForm
+        errSubmit ?
+
+          <div>
+            <p className='text-danger text-center'>
+              Oops. Something went wrong. Please Try again later.
+          </p>
+
+            {cForm}
+          </div>
+          :
+          cForm
       }
     </>
   )
