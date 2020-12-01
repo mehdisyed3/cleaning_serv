@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
-import logo from './assets/logo.png'
+import logo from './logo.png'
 
 function Navigation({ topScroll, contactScroll, serviceScroll, certScroll }) {
   return (

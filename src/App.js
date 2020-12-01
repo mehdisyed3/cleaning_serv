@@ -5,8 +5,6 @@ import { certification, services } from './helper/data'
 import Qualifications from './Qualifications';
 import ContactForm from './ContactForm'
 import Tagline from './Tagline'
-
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Col } from 'react-bootstrap'
 
 
