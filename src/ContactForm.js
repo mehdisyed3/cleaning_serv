@@ -19,13 +19,15 @@ const reducer = (formState, action) => {
       formStateCopy.submitting = true
       formStateCopy.submittingErr = null
       formStateCopy.submittingSuccess = null
+
       return formStateCopy
     }
     case ('formSubmittingErr'): {
       const formStateCopy = R.clone(formState)
       formStateCopy.submitting = false
-      formStateCopy.submittingErr = (<><p className="m-0">Oops, something seems to be broken on our side.</p><p className="m-0">Please try again later or give us a call at { AMPM_PHONE } if it's urgent.</p></>)
+      formStateCopy.submittingErr = (<><p className="m-0">Oops, something seems to be broken on our side.</p><p className="m-0">Please try again later or give us a call at {AMPM_PHONE} if it's urgent.</p></>)
       formStateCopy.submittingSuccess = null
+
       return formStateCopy
     }
     case ('formSubmittingSuccess'): {
@@ -33,6 +35,7 @@ const reducer = (formState, action) => {
       formStateCopy.submitting = false
       formStateCopy.submittingErr = null
       formStateCopy.submittingSuccess = (<><p className="m-0">Thanks for reaching out.</p><p className="m-0">Someone from our team will be reaching out to you shortly.</p></>)
+
       return formStateCopy
     }
     default: {
@@ -43,10 +46,10 @@ const reducer = (formState, action) => {
 
 const initialState = {
   data: {
-    name: 'fewwe',
-    email: 'fewfwe@fewnjfwe.com',
-    phone: '4163000264',
-    msg: 'hello bye'
+    name: '',
+    email: '',
+    phone: '',
+    msg: ''
   },
   submittingErr: null,
   submittingSuccess: null,
@@ -77,21 +80,12 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    console.log("call disp")
-
     dispatch({
       type: 'formSubmitting'
     })
 
-    // const info = {
-    //   name,
-    //   email,
-    //   phone,
-    //   message
-    // }
-
-    axios.post('/contact', formState.data)
+    axios
+      .post('/contact', formState.data)
       .then(res => {
         console.log(res)
         dispatch({
@@ -99,28 +93,21 @@ function ContactForm() {
         })
       })
       .catch(err => {
-
         console.log(err)
         dispatch({
           type: 'formSubmittingSuccess'
         })
       })
-
-    // setName("")
-    // setEmail("")
-    // setMessage("")
-    // setPhone("")
-
   }
 
   return (
     <>
-      <p className='lead'>You can call us at { AMPM_PHONE } or use the form below to get in touch with us or receive a FREE Quote.</p>
+      <p className='lead'>You can call us at {AMPM_PHONE} or use the form below to get in touch with us or receive a FREE Quote.</p>
       <p className="mb-4"><strong>Please be advised that your information is <u>never shared or sold</u>.</strong></p>
 
-      { formState.submittingErr && <Alert variant="warning">{ formState.submittingErr }</Alert>}
+      { formState.submittingErr && <Alert variant="warning">{formState.submittingErr}</Alert>}
       {
-        formState.submittingSuccess ? <Alert variant="success">{ formState.submittingSuccess }</Alert> :
+        formState.submittingSuccess ? <Alert variant="success">{formState.submittingSuccess}</Alert> :
           <Form onSubmit={handleSubmit}>
             <div className='row'>
               <div className="col-md col-lg text-left">

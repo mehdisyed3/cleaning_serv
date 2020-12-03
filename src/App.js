@@ -11,7 +11,7 @@ import { Col } from 'react-bootstrap'
 function App() {
 
   const service = services.map((item, i) => <Col className="col-md-4 mb-4 col-sm-6" key={i}  ><Service item={item} /></Col>)
-  const certs = certification.map((item, i) => <Col className="col-md-4 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
+  const certs = certification.map((item, i) => <Col className="col-md-3 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 200)
 
@@ -50,30 +50,28 @@ function App() {
         <Header className="" topScroll={topScroll} contactScroll={contactScroll} serviceScroll={serviceScroll} certScroll={certScroll} />
       </div>
       <div ref={topRef} className=" container mx-auto smScreen ">
-        <div className='my-5 text-center'>
+        <section className='my-5 text-center'>
           <h3 ref={serviceRef} className="mb-2">Services We Offer</h3>
           <br />
           <div className=' row d-flex justify-content-center'>
             {service}
           </div>
-        </div>
-        <hr />
-        <div className='my-5 text-center'>
+        </section>
+        <section className='my-5 text-center'>
           <h3 ref={certRef} className="mb-2"> Qualifications & Certificates</h3>
           <br />
           <div className='row d-flex justify-content-center'>
             {certs}
           </div>
-        </div>
-        <hr />
-        <div className='my-5 text-center'>
+        </section>
+        <section className='my-5 text-center'>
           <h3 ref={contactRef} className="mb-2">Contact Us</h3>          
           <div>
             <ContactForm />
           </div>
-        </div>
+        </section>
       </div>
-      {/* <Tagline goToContact={contactScroll} /> */}
+      <Tagline goToContact={contactScroll} />
     </>
   );
 }
