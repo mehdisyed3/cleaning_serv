@@ -43,10 +43,10 @@ const reducer = (formState, action) => {
 
 const initialState = {
   data: {
-    name: 'fewwe',
-    email: 'fewfwe@fewnjfwe.com',
-    phone: '4163000264',
-    msg: 'hello bye'
+    name: '',
+    email: '',
+    phone: '',
+    msg: ''
   },
   submittingErr: null,
   submittingSuccess: null,
