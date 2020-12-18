@@ -58,7 +58,7 @@ function App() {
           </div>
         </section>
         <section className='my-5 text-center'>
-          <h3 ref={certRef} className="mb-2"> Qualifications & Certificates</h3>
+          <h3 ref={certRef} className="mb-2">Qualifications & Certificates</h3>
           <br />
           <div className='row d-flex justify-content-center'>
             {certs}
