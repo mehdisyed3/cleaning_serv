@@ -10,8 +10,8 @@ import { Col } from 'react-bootstrap'
 
 function App() {
 
-  const service = services.map((item, i) => <Col className="col-md-4 mb-4 col-sm-6" key={i}  ><Service item={item} /></Col>)
-  const certs = certification.map((item, i) => <Col className="col-md-3 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></Col>)
+  const service = services.map((item, i) => <div className="col-12 col-md-4 mb-4" key={i}><Service item={item} /></div>)
+  const certs = certification.map((item, i) => <div className="col-md-3 col-sm-6 mb-4 " key={i}  ><Qualifications item={item} /></div>)
 
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop - 200)
 
