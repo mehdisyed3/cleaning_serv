@@ -14,35 +14,35 @@ const services = [
 
 const certification = [
   {
-    src: 'https://cdn.ymaws.com/iicrc.site-ym.com/graphics/logo.png',
+    src: require('./iirc.jpg'),
     desc: 'Member since 2003'
   },
   {
-    src: 'https://cleanfax.com/wp-content/uploads/2015/07/PR_AbatementLogo_360x235_72DPI_RGB.jpg',
+    src: require('./abatement.jpg'),
     desc: 'MTCU 253W'
   },
   {
-    src: 'https://www.codeblue360.com/floodhouse/img/AMRT.png',
+    src: require('./amrt.jpg'),
     desc: "Applied Microbial Remediation Technician"
   },
   {
-    src: 'https://www.cleansafeservices.co.uk/wp-content/uploads/2017/04/crime-scene-cleaning.png',
+    src: require('./pexels-matilda-wormwood-4099259.jpg'),
     desc: 'Trauma and Crime-Scene Cleanup'
   },
   {
-    src: 'https://cdn.ymaws.com/iicrc.site-ym.com/graphics/logo.png',
+    src: require('./pexels-karolina-grabowska-4194857.jpg'),
     desc: 'Water Damage Restoration'
   },
   {
-    src: 'https://images.freeimages.com/images/large-previews/361/fire-4-1189547.jpg  ',
+    src: require('./pexels-igor-haritanovich-1695050.jpg'),
     desc: 'Fire and Smoke Restoration'
   },
   {
-    src: 'https://storage.needpix.com/rsynced_images/lift-3437831_1280.jpg',
+    src: require('./lift-3437831_1280.jpg'),
     desc: 'Aerial Lifts and Aerial Work Platform'
   },
   {
-    src: 'https://static4.depositphotos.com/1023345/358/i/950/depositphotos_3585332-stock-photo-working-on-the-heights.jpg',
+    src: require('./pexels-rafael-de-lancer-2116491.jpg'),
     desc: 'Working At Heights'
   }
 
