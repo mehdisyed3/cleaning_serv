@@ -53,7 +53,7 @@ app.post('/contact', async (req, res) => {
       `\n`,
       unescape(msg)
     ];
-    const rec = "phil@ampmremediation.com"
+    const rec = "ampmremediation@gmail.com"
 
     exec([
       `echo "${emailBodyArr.join("\n")}" | mail -s "Inquiry" -S replyto="${name}<${email}>" ${rec}`
