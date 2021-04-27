@@ -1,5 +1,6 @@
 
 const services = [
+  { name: "24/7 Mold Remediation", text: `At AMPM Remediation Services we believe in providing the best possible service to our clients. Our goal is to get you back on track to a cleaner, healthier, and mold-free environment.` },
   { name: "24/7 Emergency Service", text: 'We are dedicated to help our customers at all times of the day. Just give us a call, and our team will take care of the emergency.' },
   { name: 'HOARDING CLEAN-UP', text: 'Professional clearing, cleaning and decontamination quickly returns your property to a habitable and saleable condition.' },
   { name: 'ANIMAL HOARDING CLEAN-UP', text: 'A DANGEROUS SITUATION, Animal waste and dander can be unsafe when not properly contained and regularly cleaned.' },

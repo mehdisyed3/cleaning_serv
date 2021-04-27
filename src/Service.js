@@ -8,13 +8,12 @@ function Service({ item }) {
       <Card.Body className='mx-auto'>
           <Card.Title className='p-1 m-1 text-center' >
             <p> {item.name}</p>
-            <br />
-            <small className="text-secondary" >{item.text}</small>
+            <div className="mt-2">
+              <small className="text-secondary" >{item.text}</small>
+            </div>
           </Card.Title>   
       </Card.Body>
     </Card>
-
-
   )
 }
 
